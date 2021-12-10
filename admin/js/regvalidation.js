@@ -10,7 +10,7 @@ function validateForm() {
     var phone = document.getElementById("phone").value;
     var email = document.getElementById("email").value;
     var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var password = document.getElementById("pwd").value;
     
     var length = radios.length;
     for (var i = 0; i < length; i++) {

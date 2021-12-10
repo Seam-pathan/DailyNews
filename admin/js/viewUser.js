@@ -10,45 +10,26 @@ function MyAjaxFunc() {
         var l = Object.keys(res).length;
         console.log(l);
         var f;
-      
-  
+
         for (i = 0; i < l; i++) {
           f = document.createElement("div");
           f.innerHTML = `
-          <form action="../controller/verifysignup.php" method="post">
+          <form action="../control/verifyreg.php" method="post">
           <div class="grid-container-1">
               <div>
                   <p>`+res[i].id+`</p>
               </div>
               <div>
-                  <p>`+res[i].firstname+`</p>
+                  <p>`+res[i].name+`</p>
               </div>
               <div>
-                  <p>`+res[i].lastname+`</p>
+                  <p>`+res[i].email+`</p>
               </div>
               <div>
                   <p>`+res[i].gender+`</p>
               </div>
               <div>
                   <p>`+res[i].dob+`</p>
-              </div>
-              <div>
-                  <p>`+res[i].religion+`</p>
-              </div>
-              <div>
-                  <p>`+res[i].PresentAddress+`</p>
-              </div>
-              <div>
-                  <p>`+res[i].PermanentAddress+`</p>
-              </div>
-              <div>
-                  <p>`+res[i].phone+`</p>
-              </div>
-              <div>
-                  <p>`+res[i].email+`</p>
-              </div>
-              <div>
-                  <p>`+res[i].username+`</p>
               </div>
               <div id="sub-grid">
                       <input class="btn-action btn-reject" type="submit" value="delete" name="delete">
@@ -57,12 +38,13 @@ function MyAjaxFunc() {
           </div>
           <div>
           </div>
-          <input type="hidden" name="email" value="` + res[i].username + `">
-          <input type="hidden" name="table" value="editor_info">
+          <input type="hidden" name="username" value="` + res[i].username + `">
+          <input type="hidden" name="table" value="user">
           
-          <input type="hidden" name="redirect_path" value="../view/ViewActiveEditor.php">
+          <input type="hidden" name="redirect_path" value="../view/ViewUser.php">
           </form>
           `;
+  
           maincontainer.appendChild(f);
         }
       }
@@ -70,9 +52,10 @@ function MyAjaxFunc() {
   
     xhttp.open(
       "POST",
-      "/Project/control/getActiveEditor.php",
+      "/DailyNews/admin/control/GetUser.php",
       true
-    ); 
+    );
+  
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("fname=henry&lname=Ford");
   }

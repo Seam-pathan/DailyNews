@@ -1,16 +1,7 @@
-
-    <!-- session_start();
-
-	if(count($_SESSION) === 0)
-	{
-		header("Location: ALogout.php");
-	} -->
-
-
 <?php
    $color = isset($_COOKIE['bgcolor']) ? $_COOKIE['bgcolor'] : 'white';
+   require('../control/ARegistrationAction.php');
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -25,11 +16,11 @@
 <?php require('AHeader.php')  ?>
 	<h1>Register form for Admin</h1>
 
-	    <form action="../control/ARegistrationAction.php" method="post">
-		First Name: <input type="text" name="firstname">
+	    <form action="../control/ARegistrationAction.php" OnSubmit="return validateForm()" method="post">
+		First Name: <input type="text" id="firstname" name="firstname">
 		<br>
 		<br>
-		Last Name: <input type="text" name="lastname">
+		Last Name: <input type="text" id="lastname" name="lastname">
 		<br>
 		<br>
 		Gender: 
@@ -39,11 +30,11 @@
 		<br>
 		<br>
 		<lable>Date of Birth:</lable>
-        <input type="date" name="dob">
+        <input type="date" id="dob" name="dob">
         <br><br>
 
         <lable>Religion:</lable>
-        <select name="Religion">
+        <select  id="Religion" name="Religion">
 			<option value="islam">Islam</option>
 			<option value="christianity">Christianity</option>
 			<option value="hinduism">Hinduism</option>
@@ -54,11 +45,11 @@
 	<h2>Contact Information</h2>
 
 	    <label for="PresentAddress">PresentAddress:</label>
-	    <textarea name="PresentAddress"></textarea>
+	    <textarea id="PresentAddress" name="PresentAddress"></textarea>
 	    <br><br>
 
 	    <label for="PermanentAddress">PermanentAddress:</label>
-	    <textarea name="PermanentAddress"></textarea>
+	    <textarea id="PermanentAddress" name="PermanentAddress"></textarea>
 	    <br><br>
 
 	    <label for="Phone">Phone:</label>
@@ -67,13 +58,13 @@
 
 
 	   <lable>Enter your email:</lable>
-       <input type="email" name="email">
+       <input type="email" id="email" name="email">
        <br><br>
 
 
        <h2>Account Information</h2>
 
-       Username: <input type="text" name="username">
+       Username: <input type="text" id="username" name="username">
        <br><br>
 
        <lable for="pwd">Password:</lable>

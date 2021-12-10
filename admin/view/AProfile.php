@@ -61,14 +61,9 @@ include "../control/AProfileAction.php";
 
 
     <a href="AUpdateProfile.php">Update Profile</a>
-	<a href="ADeleteProfile.php">Delete Profile</a>
 	<br><br>
-	<a href="AChangePassword.php">Change Password</a>
-	<br><br>
-	
     <a href="AHome.php">Back</a>
     <br><br>
-
 
 </body>
 </html>

@@ -10,7 +10,7 @@ function MyAjaxFunc() {
         var l = Object.keys(res).length;
         console.log(l);
         var f;
-       
+      
   
         for (i = 0; i < l; i++) {
           f = document.createElement("div");
@@ -24,13 +24,16 @@ function MyAjaxFunc() {
                   <p>`+res[i].firstname+`</p>
               </div>
               <div>
+                  <p>`+res[i].lastname+`</p>
+              </div>
+              <div>
                   <p>`+res[i].gender+`</p>
               </div>
               <div>
-                  <p>`+res[i].DateOfBirth+`</p>
+                  <p>`+res[i].dob+`</p>
               </div>
               <div>
-                  <p>`+res[i].Religion+`</p>
+                  <p>`+res[i].religion+`</p>
               </div>
               <div>
                   <p>`+res[i].PresentAddress+`</p>
@@ -49,18 +52,17 @@ function MyAjaxFunc() {
               </div>
               <div id="sub-grid">
                       <input class="btn-action btn-reject" type="submit" value="delete" name="delete">
-                      <input class="btn-action btn-reject" type="submit" value="disable" name="disable">
+                      <input class="btn-action btn-reject" type="submit" value="approve" name="approve">
               </div>
           </div>
           <div>
           </div>
           <input type="hidden" name="username" value="` + res[i].username + `">
-          <input type="hidden" name="table" value="repoter">
+          <input type="hidden" name="table" value="editor_info">
           
-          <input type="hidden" name="redirect_path" value="../view/ViewActiveReporter.php">
+          <input type="hidden" name="redirect_path" value="../view/ViewPendingEditor.php">
           </form>
           `;
-  
           maincontainer.appendChild(f);
         }
       }
@@ -68,10 +70,9 @@ function MyAjaxFunc() {
   
     xhttp.open(
       "POST",
-      "/DailyNews/admin/control/getActiveReporter.php",
+      "/DailyNews/admin/control/getPendingEditor.php",
       true
-    );
-  
+    ); 
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("fname=henry&lname=Ford");
   }

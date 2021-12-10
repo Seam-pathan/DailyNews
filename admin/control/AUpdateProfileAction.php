@@ -16,7 +16,6 @@
        return $insertStatus;
    }
    
-//    $validImage="";
    $validateName = "";
    $genderValidation = "";
    $validPassword = "";
@@ -74,17 +73,6 @@
         $valiDate = "select date is " . $dob2;
         echo $valiDate;
     }
-
-    // $profile = $_POST["profilePicPath"];
-    // $random=uniqid();
-    // $path="../../resources/profile/";
-    // if ($_FILES["image"]["size"] > 1000) {
-    //     $profile = $path . $random . basename($_FILES["image"]["name"]);
-    //     if (file_exists($profile)) {
-    //         $random = uniqid();
-    //         $profile = $path . $random . basename($_FILES["image"]["name"]);
-    //     }
-    // }
 
     if ($flag == 1) {
     

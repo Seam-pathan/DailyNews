@@ -10,25 +10,25 @@
    $color = isset($_COOKIE['bgcolor']) ? $_COOKIE['bgcolor'] : 'white';
 ?>
 
+
 <?php
 require('../control/getprofiledata.php');
 if ($userdata->num_rows > "0") {
     while ($row = $userdata->fetch_assoc()) {
         $id = $row['id'];
-        $firstname = $row['firstname'];
+        $name = $row['firstname'];
+        $email = $row['email'];
+        $password = $row['pwd'];
         $gender = $row['gender'];
         $dob = $row['DateOfBirth'];
-        $Religion = $row['Religion'];
-        $PresentAddress = $row['PresentAddress'];
-        $PermanentAddress = $row['PermanentAddress'];
-        $phone = $row['phone'];
-        $email = $row['email'];
-        $username = $row['username'];
+        // $image =  $row['image'];
+        // $doj = $row['doj'];
     }
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/regrequest.css">
@@ -37,50 +37,39 @@ if ($userdata->num_rows > "0") {
 
 <body>
     <section id="sum-info">
-      
+        
         <div id="main-container">
             <div class="grid-container-1">
                 <div>
                     <p>Id</p>
                 </div>
                 <div>
-                    <p>firstName</p>
+                    <p>Name</p>
+                </div>
+                <div>
+                    <p>Email</p>
                 </div>
                 <div>
                     <p>Gender</p>
                 </div>
                 <div>
-                    <p>date of birth</p>
+                    <p>Birth date</p>
                 </div>
                 <div>
-				    <p>Religion</p>
-			    </div>
-			    <div>
-				    <p>PresentAddress</p>
-			    </div>
-			    <div>
-				    <p>PermanentAddress</p>
-			    </div>
-			    <div>
-				    <p>phone</p>
-			    </div>
-			    <div>
-				    <p>Email</p>
-			    </div>
-			    <div>
-				    <p>username</p>
-			    </div>
-			    <div>
-				    <p>Actions</p>
-			    </div>
+                    <p>Actions</p>
+                </div>
+
             </div>
+
         </div>
+
     </section>
-    <script src="../js/viewPendingReporter.js"></script>
+    <script src="../js/viewUser.js"></script>
     <script>
         MyAjaxFunc();
     </script>
     <a href="AHome.php">Back</a>
 	<br><br>
 </body>
+
 </html>

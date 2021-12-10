@@ -68,7 +68,7 @@ function MyAjaxFunc() {
     };
     xhttp.open(
       "POST",
-      "/Project/control/getActiveAdmin.php",
+      "/DailyNews/admin/control/getActiveAdmin.php",
       true
     );
   

@@ -49,7 +49,7 @@ function MyAjaxFunc() {
               </div>
               <div id="sub-grid">
                       <input class="btn-action btn-reject" type="submit" value="delete" name="delete">
-                      <input class="btn-action btn-reject" type="submit" value="disable" name="disable">
+                      <input class="btn-action btn-reject" type="submit" value="approve" name="approve">
               </div>
           </div>
           <div>
@@ -57,7 +57,7 @@ function MyAjaxFunc() {
           <input type="hidden" name="username" value="` + res[i].username + `">
           <input type="hidden" name="table" value="repoter">
           
-          <input type="hidden" name="redirect_path" value="../view/ViewActiveReporter.php">
+          <input type="hidden" name="redirect_path" value="../view/ViewPendingReporter.php">
           </form>
           `;
   
@@ -68,7 +68,7 @@ function MyAjaxFunc() {
   
     xhttp.open(
       "POST",
-      "/DailyNews/admin/control/getActiveReporter.php",
+      "/DailyNews/admin/control/getPendingReporter.php",
       true
     );
   

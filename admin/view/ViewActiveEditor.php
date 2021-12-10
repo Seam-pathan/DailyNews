@@ -79,10 +79,12 @@ if ($userdata->num_rows > "0") {
 		    </div>
         </div>
     </section>
-    <script src="../js/vievActiveEditor.js"></script>
+    <script src="../js/viewActiveEditor.js"></script>
     <script>
         MyAjaxFunc();
     </script>
+	<a href="AHome.php">Back</a>
+	<br><br>
 </body>
 
 </html>

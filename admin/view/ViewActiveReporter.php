@@ -80,5 +80,7 @@ if ($userdata->num_rows > "0") {
     <script>
         MyAjaxFunc();
     </script>
+    <a href="AHome.php">Back</a>
+	<br><br>
 </body>
 </html>

@@ -25,6 +25,12 @@
 	<br><br>
 	<a href="ViewPendingAdmin.php">Pending Admin</a>
 	<br><br>
+	<a href="ViewPendingReporter.php">Pending Repoter</a>
+	<br><br>
+	<a href="ViewPendingEditor.php">Pending Editor</a>
+	<br><br>
+	<a href="ViewUser.php">All Users</a>
+	<br><br>
 	<a href="ViewActiveAdmin.php">Admin</a>
 	<br><br>
 	<a href="ViewActiveEditor.php">Editor</a>

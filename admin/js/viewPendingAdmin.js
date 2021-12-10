@@ -70,7 +70,7 @@ function MyAjaxFunc() {
   
     xhttp.open(
       "POST",
-      "/Project/control/getPendingAdmin.php",
+      "/DailyNews/admin/control/getPendingAdmin.php",
       true
     );
   
