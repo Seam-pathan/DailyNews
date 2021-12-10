@@ -1,42 +1,41 @@
 <?php
-    session_start();
+session_start();
 
-	if(count($_SESSION) === 0)
-	{
-		header("Location: ../view/ALogout.php");
-	}
+if (count($_SESSION) === 0) {
+    header("Location: ../view/ALogout.php");
+}
 ?>
 <?php
-   include_once('../model/db.php');
-   function updateAdmin($firstname2, $gender2, $dob2, $Religion2, $PresentAddress2, $PermanentAddress2, $phone2, $email2,  $username2, $pwd)
-   {
-       $connection = new db();
-       $conobj = $connection->OpenCon();
-       $insertStatus = $connection->updateAdminData($conobj, "admin", $firstname2, $gender2, $dob2, $Religion2, $PresentAddress2, $PermanentAddress2, $phone2, $email2,  $username2, $pwd);
-       return $insertStatus;
-   }
-   
-   $validateName = "";
-   $genderValidation = "";
-   $validPassword = "";
-   $valiDate = "";
-   $flag = 1;
-   $userAddingvalidation = "";
-   
-   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-       $firstname2 = $_REQUEST["firstname2"];
-	   $gender2 = $_REQUEST["gender2"];
-	   $dob2 = $_REQUEST["dob2"];
-	   $Religion2 = $_REQUEST["Religion2"];
-	   $PresentAddress2 = $_REQUEST["PresentAddress2"];
-	   $PermanentAddress2 = $_REQUEST["PermanentAddress2"];
-	   $phone2 = $_REQUEST["phone2"];
-	   $email2 = $_REQUEST["email2"];
+include_once('../model/db.php');
+function updateAdmin($firstname2, $gender2, $dob2, $Religion2, $PresentAddress2, $PermanentAddress2, $phone2, $email2,  $username2, $pwd)
+{
+    $connection = new db();
+    $conobj = $connection->OpenCon();
+    $insertStatus = $connection->updateAdminData($conobj, "admin", $firstname2, $gender2, $dob2, $Religion2, $PresentAddress2, $PermanentAddress2, $phone2, $email2,  $username2, $pwd);
+    return $insertStatus;
+}
 
-	   $pwd = $_REQUEST["pwd"];
+$validateName = "";
+$genderValidation = "";
+$validPassword = "";
+$valiDate = "";
+$flag = 1;
+$userAddingvalidation = "";
 
-       if (empty($firstname2) || strlen($firstname2) < 5) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $firstname2 = $_REQUEST["firstname2"];
+    $gender2 = $_REQUEST["gender2"];
+    $dob2 = $_REQUEST["dob2"];
+    $Religion2 = $_REQUEST["Religion2"];
+    $PresentAddress2 = $_REQUEST["PresentAddress2"];
+    $PermanentAddress2 = $_REQUEST["PermanentAddress2"];
+    $phone2 = $_REQUEST["phone2"];
+    $email2 = $_REQUEST["email2"];
+
+    $pwd = $_REQUEST["pwd"];
+
+    if (empty($firstname2) || strlen($firstname2) < 5) {
         $validateName = "you must enter your name";
         $flag = 0;
         echo $validateName;
@@ -75,7 +74,7 @@
     }
 
     if ($flag == 1) {
-    
+
         $username2 = $_POST["username2"];
         $flag = updateAdmin($firstname2, $gender2, $dob2, $Religion2, $PresentAddress2, $PermanentAddress2, $phone2, $email2,  $username2, $pwd);
         if ($flag) {
@@ -84,13 +83,11 @@
         } else {
             $userAddingvalidation = "something went wrong. try again later";
         }
-    }
-    else if($flag==0){
+    } else if ($flag == 0) {
         echo " not valid";
         echo $flag;
-    }
-    else{
+    } else {
         echo "non of them";
     }
-   }
+}
 ?>

@@ -21,8 +21,6 @@ if ($userdata->num_rows > "0") {
         $password = $row['pwd'];
         $gender = $row['gender'];
         $dob = $row['DateOfBirth'];
-        // $image =  $row['image'];
-        // $doj = $row['doj'];
     }
 }
 ?>
@@ -58,11 +56,8 @@ if ($userdata->num_rows > "0") {
                 <div>
                     <p>Actions</p>
                 </div>
-
             </div>
-
         </div>
-
     </section>
     <script src="../js/viewUser.js"></script>
     <script>

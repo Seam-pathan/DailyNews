@@ -79,11 +79,6 @@ function validateForm() {
             alert("Fill up the Permanent Address");
             return false;
         }
-        // else if(!firstname.match(regex))
-        // {
-        //     alert("invalid name");
-        //     return false;
-        // }
         regex=/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
         if(!email.match(regex))
         {
