@@ -15,12 +15,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Form Example</title>
+	<script src="../js/UpdateValidation.js"></script>
+	<link rel="stylesheet" href="../css/nav.css">
 </head>
 <body style="background-color: <?php echo $color; ?>;">
 	<h1>Update Information</h1>
 
-	    <form action="../control/AUpdateProfileAction.php" method="post">
-		Enter your Name: <input type="text" name="firstname2">
+	    <form action="../control/AUpdateProfileAction.php" OnSubmit="return validateForm()"  method="post">
+		Enter your Name: <input type="text" id="firstname" name="firstname2">
 		<br><br>
 		
 		Gender: 
@@ -30,11 +32,11 @@
 		<br>
 		<br>
 		<lable>Date of Birth:</lable>
-        <input type="date" name="dob2">
+        <input type="date" id="dob" name="dob2">
         <br><br>
 
         <lable>Religion:</lable>
-        <select name="Religion2">
+        <select id="Religion" name="Religion2" >
 			<option value="islam">Islam</option>
 			<option value="christianity">Christianity</option>
 			<option value="hinduism">Hinduism</option>
@@ -43,11 +45,11 @@
 		<br><br>
 
 	    <label for="PresentAddress">PresentAddress:</label>
-	    <textarea name="PresentAddress2"></textarea>
+	    <textarea name="PresentAddress2" id="PresentAddress"></textarea>
 	    <br><br>
 
 	    <label for="PermanentAddress">PermanentAddress:</label>
-	    <textarea name="PermanentAddress2"></textarea>
+	    <textarea name="PermanentAddress2" id="PermanentAddress"></textarea>
 	    <br><br>
 
 	    <label for="Phone">Phone:</label>
@@ -55,20 +57,22 @@
 	    <br><br>
 
 	   <lable>Enter your email:</lable>
-       <input type="email" name="email2">
+       <input type="email" id="email" name="email2">
        <br><br>
 
-       Username: <input type="text" name="username2">
+       Username: <input type="text" id="username" name="username2">
        <br><br>
 
 	   <lable for="pwd">Password:</lable>
        <input type="password"id="pwd" name="pwd">
        <br><br>
 	   
-
+       <div class="back-btn">
        <input type="submit" name="submit" value="update">
        </form>
-	   <br><br>
+	   </div>
+	   <div class="back-btn">
        <a href="AProfile.php">Back</a>
+	   </div>
 </body>
 </html>

@@ -3,7 +3,6 @@
    // {
    //    setcookie("bgcolor", $_GET['color']);
    // }
-
    // $color = isset($_COOKIE['bgcolor']) ? $_COOKIE['bgcolor'] : 'white';
 ?>
 
@@ -13,14 +12,15 @@
    <meta charset="utf-8">
    <title>Login</title>
    <link rel="stylesheet" href="../css/Login.css">
+   <script src="../js/LoginValidation.js"></script>
 </head>
 <body class="bg-color">
 <?php require('AHeader.php')  ?>
    <h1>Admin</h1>
 
-    <form action="../control/ALoginAction.php" method="post">
+    <form action="../control/ALoginAction.php" OnSubmit="return validateLogins()" method="post">
 
-       Username: <input type="text" name="username">
+       Username: <input type="text"id="username" name="username">
        <br><br>
 
        <lable for="pwd">Password:</lable>

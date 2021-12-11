@@ -36,10 +36,22 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/nav.css">
 	<link rel="stylesheet" href="../css/regrequest.css">
 	<title>Document</title>
 </head>
 <body>
+<div class=navbar>
+		<h1 class="admin">Admin</h1>
+		<div class=navlink>
+			<a class="active" href="ViewActiveAdmin.php">Admin</a>
+			<br><br>
+			<a href="ViewActiveEditor.php">Editor</a>
+			<br><br>
+			<a href="ViewActiveReporter.php">Reporter</a>
+			<br><br>
+		</div>
+	</div>
 <section id="sum-info">
     
 	<div id="main-container">
@@ -88,7 +100,8 @@
     <script>
         MyAjaxFunc();
     </script>
+	<div class="back-btn">
 	<a href="AHome.php">Back</a>
-	<br><br>
+	</div>
 </body>
 </html>

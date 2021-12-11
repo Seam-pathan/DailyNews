@@ -11,16 +11,16 @@
 <body style="background-color: <?php echo $color; ?>;">
 	<h1>Welcome to our daily newspaper</h1>
 
-    <a href="./view/ALogin.php">Click here</a> for Admin Login.
+    <a href="./admin/view/ALogin.php">Click here</a> for Admin Login.
     <br><br>
 
-    <a href="./view/Registration.php">Click here</a> for Editor Login.
+    <a href="./editor/view/ELogin.php">Click here</a> for Editor Login.
     <br><br>
 
-    <a href="./view/Registration.php">Click here</a> for REPORTER Login.
+    <a href="./admin/view/Registration.php">Click here</a> for REPORTER Login.
     <br><br>
 
-    <a href="./view/Registration.php">Click here</a> for User Login.
+    <a href="./admin/view/Registration.php">Click here</a> for User Login.
     <br><br>
 </body>
 </html>
