@@ -23,7 +23,8 @@ include "../control/AProfileAction.php";
 	<link rel="stylesheet" href="../css/nav.css">
 </head>
 
-<body style="background-color: <?php echo $color; ?>;">
+<body style="background-color: #EDD2F3;">
+<div class="bcolour">
 	<div class="profile">
 		<h1>Profile</h1>
 	</div>
@@ -35,6 +36,7 @@ include "../control/AProfileAction.php";
 		$row = mysqli_fetch_array($q);
 		?>
 
+        <div class="p-info">
 		<table border="1">
 			<thead>
 
@@ -75,13 +77,17 @@ include "../control/AProfileAction.php";
 				</tr>
 			</thead>
 		</table>
+		</div>
 
 		<div class="back-btn">
 		<a href="AUpdateProfile.php">Update Profile</a>
 		</div>
-		<div class="back-btn">
+		<div class="back-btn2">
         <a href="AHome.php">Back</a>
+		</div>
     </div>
+
+	</div>
 
 </body>
 </html>

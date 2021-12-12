@@ -18,9 +18,12 @@
 	<script src="../js/UpdateValidation.js"></script>
 	<link rel="stylesheet" href="../css/nav.css">
 </head>
-<body style="background-color: <?php echo $color; ?>;">
-	<h1>Update Information</h1>
+<body style="background-color: #EDD2F3;">
+<div class="update">
+	<div>
+	<h1 class="updateProfile">Update Information</h1>
 
+	<div class="formc">
 	    <form action="../control/AUpdateProfileAction.php" OnSubmit="return validateForm()"  method="post">
 		Enter your Name: <input type="text" id="firstname" name="firstname2">
 		<br><br>
@@ -67,12 +70,13 @@
        <input type="password"id="pwd" name="pwd">
        <br><br>
 	   
-       <div class="back-btn">
-       <input type="submit" name="submit" value="update">
-       </form>
-	   </div>
-	   <div class="back-btn">
+       <input class="submit-btn" type="submit" name="submit" value="update">
+	</form>
+	</div>
+	   <div class="back-btn2">
        <a href="AProfile.php">Back</a>
 	   </div>
+	</div>
+</div>
 </body>
 </html>

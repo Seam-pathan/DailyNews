@@ -6,7 +6,6 @@ function MyAjaxFunc() {
         res = JSON.parse(this.responseText);
         console.log(res);
         var maincontainer = document.getElementById("main-container");
-        var name;
         var l = Object.keys(res).length;
         console.log(l);
         var f;

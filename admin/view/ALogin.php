@@ -1,10 +1,3 @@
-<?php
-   // if($_SERVER['REQUEST_METHOD'] == "GET" and count($_GET)>0)
-   // {
-   //    setcookie("bgcolor", $_GET['color']);
-   // }
-   // $color = isset($_COOKIE['bgcolor']) ? $_COOKIE['bgcolor'] : 'white';
-?>
 
 <!DOCTYPE html>
 <html>
@@ -40,16 +33,6 @@
     Not registered yet? <a href="ARegistration.php">Click here</a> for registration.
     <br><br>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GRT">
-        Select Page Color: 
-         <select name="color" id="color">
-         <option value="white" selected>white</optionWhite</option>
-         <option value="#cbeca4">Light Green</option>
-         <option value="#a2c9e8">Light Blue</option>
-         </select>
-
-         <input type="submit" name="submit" value="change color">
-    </form>
     <a href="../index.php">Back</a>
     <br><br>
     <?php require('AFooter.php'); ?>

@@ -37,6 +37,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../css/regrequest.css">
+	<link rel="stylesheet" href="../css/nav.css">
 	<title>Document</title>
 </head>
 <body>
@@ -88,7 +89,9 @@
     <script>
         MyAjaxFunc();
     </script>
+	<div class="back-btn">
 	<a href="AHome.php">Back</a>
 	<br><br>
+	</div>
 </body>
 </html>

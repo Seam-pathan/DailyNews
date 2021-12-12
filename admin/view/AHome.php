@@ -27,8 +27,6 @@ $color = isset($_COOKIE['bgcolor']) ? $_COOKIE['bgcolor'] : 'white';
 			<br><br>
 			<a href="ViewActiveReporter.php">Reporter</a>
 			<br><br>
-			<a href="AUserManagment.php">User</a>
-			<br><br>
 		</div>
 		<div class=profileName>
 			<a href="AProfile.php">Profile |</a>

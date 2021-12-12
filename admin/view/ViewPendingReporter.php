@@ -32,6 +32,7 @@ if ($userdata->num_rows > "0") {
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/regrequest.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <title>Document</title>
 </head>
 
@@ -80,7 +81,9 @@ if ($userdata->num_rows > "0") {
     <script>
         MyAjaxFunc();
     </script>
+    <div class="back-btn">
     <a href="AHome.php">Back</a>
 	<br><br>
+    </div>
 </body>
 </html>

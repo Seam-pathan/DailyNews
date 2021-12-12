@@ -21,6 +21,7 @@ if ($userdata->num_rows > "0") {
         $password = $row['pwd'];
         $gender = $row['gender'];
         $dob = $row['DateOfBirth'];
+		$username = $row['username'];
     }
 }
 ?>
@@ -30,6 +31,7 @@ if ($userdata->num_rows > "0") {
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/regrequest.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <title>Document</title>
 </head>
 
@@ -51,8 +53,11 @@ if ($userdata->num_rows > "0") {
                     <p>Gender</p>
                 </div>
                 <div>
-                    <p>Birth date</p>
+                    <p>DateOfBirth</p>
                 </div>
+                <div>
+					<p>username</p>
+				</div>
                 <div>
                     <p>Actions</p>
                 </div>
@@ -63,8 +68,9 @@ if ($userdata->num_rows > "0") {
     <script>
         MyAjaxFunc();
     </script>
+    <div class="back-btn">
     <a href="AHome.php">Back</a>
 	<br><br>
+    </div>
 </body>
-
 </html>

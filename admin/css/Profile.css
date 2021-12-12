@@ -39,3 +39,18 @@
     font-size: 25px;
     margin-top: 20px;
 }
+.profile h1{
+    text-align: center;
+    font-size: 40px;
+}
+.p-info{
+    display: flex;
+    justify-content: center;
+}
+
+.p-info table {
+    height: 300px;
+    width: 500px;
+    text-align: center;
+    font-size: 25px;
+}
